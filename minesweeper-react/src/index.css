@@ -1,0 +1,124 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  background: radial-gradient(circle at top left, #000f33 0%, #1e002e 100%), 
+              linear-gradient(45deg, rgba(27, 27, 27, 0.3), rgba(52, 0, 0, 0.3));
+  background-blend-mode: screen, multiply;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 5px;
+  background-color: #dcd6bc;
+  padding: 10px;
+  border: 10px solid #dcd6bc;
+}
+
+.grid div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.valid, .bomb {
+  width: 40px;
+  height: 40px;
+  background-color: #fff9db;
+  border: 2px solid #bab7a9;
+  transition: background-color 0.2s;
+}
+
+.checked {
+  background-color: #cecab7;
+  border: 2px solid #9c998d;
+}
+
+.flag {
+  color: red;
+}
+
+.one {
+  color: #e76346;
+}
+
+.two {
+  color: #4199d3;
+}
+
+.three {
+  color: #57da59;
+}
+
+.four {
+  color: #bb41d3;
+}
+
+#result {
+  margin-top: 10px;
+  color: #e76346;
+}
+
+#reset-button {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icons {
+  display: flex;
+}
+
+.icons .icon {
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.icons .icon:hover {
+  transform: translateY(-5px);
+}
+
+.footer p {
+  color: aliceblue;
+  margin-top: 10px;
+}
+
+.icons .icon img {
+  height: 40px;
+  border-radius: 10%;
+}
